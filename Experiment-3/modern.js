@@ -7,6 +7,7 @@ const orders = [
  
 const byStatus = Object.groupBy(orders, o => o.status);      // ES2024
 console.log(Object.keys(byStatus));
+console.log(Object.values(byStatus));
  
 const top = orders.toSorted((a, b) => b.amount - a.amount);  // copy, then sort
 console.log(top[0].customer, top[0].amount);
